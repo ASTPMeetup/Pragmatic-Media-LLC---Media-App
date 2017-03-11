@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Pragmatic Media">
+  <meta name="keywords" content="Pragmatic Media, Ty and Slob, Piero Pretto">
+  <meta name="description" content="The Ty and Slob podcast brings a humorous yet serious morning-show style to talk about almost everything such as pop culture, trending topics in the internet and news, and much more. Let's look at the world from a pragmatic stance." />
+  <meta property="og:image" content="http://tyandslob.com/images/logo.jpg"/>
+  <meta property="og:title" content="Pragmatic Media LLC - Ty and Slob: Now in Syndication"/>
+  <meta property="og:description" content="The Ty and Slob podcast brings a humorous yet serious morning-show style to talk about almost everything such as pop culture, trending topics in the internet and news, and much more. Let's look at the world from a pragmatic stance." />
+  <meta property="og:url" content="http://tyandslob.com"/>
+  <meta property="og:site_name" content="http://tyandslob.com"/>
+  <meta property="og:type" content="website"/>
+
+    <title>Pragmatic Media - Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="business-frontpage.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet" type='text/css'>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top custom-nav" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse float-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-1x"></i></a></li>
+                  <li><a href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-1x"></i></a></li>
+                  <li><a href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-1x"></i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube"></i></a></li>
+                    <li>
+                        <a href="media_library.html">Media</a>
+                    </li>
+                    <li>
+                        <a href="http://teechip.com/FanTool">Shop</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header">
+        <div class="container">
+            <div class="row banner_content col-lg-12">
+                <div class="banner_text">
+                  <h1 class="banner_header">Ty &amp; Slob: Now in Syndication</h1>
+                  <p class="tagline">Pragmatic Media LLC</p>
+                  <br>
+                  <!-- <a href="#about" class="header_btn">Explore</a> -->
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <br>
+        <br>
+
+        <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12" ng-controller="MediaCtrl">
+              <div>
+                <span id="viewAll"><a href="media_library.html">View All</a></span>
+                <h2>Latest Content</h2>
+
+              </div>
+                <hr>
+                <h3>{{banner.title}}</h3>
+                <br>
+                <div id="bannerContainer">
+                  <div class="embed-responsive embed-responsive-16by9" ng-bind-html="banner.iframe"></div>
+                </div>
+                <br>
+                <h2>Popular Content</h2>
+                <hr>
+                <li ng-repeat="item in library | limitTo:5">
+                    <p><strong><a href="media_library.html?video_id={{item._id}}">{{item.title}}</a></strong><span><i>{{item.date}}</i></span></p>
+                </li>
+                <br>
+            </div>
+              <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 marketing-container">
+                <h2>Connect With Us</h2>
+                <hr>
+                <div class="thumbnail">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:80px;">
+                      <div class="col-md-12 .col-md-offset-6">
+                        <ul class="social">
+                          <li class="facebook"><a href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                          <li class="twitter"><a href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-3x"></i></a></li>
+                          <li class="pinterest"><a href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube fa-3x"></i></a></li>
+                          <li class="behance"><a href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                        </ul>
+
+                      </div>
+                  </div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                      <p class="tagline">Pragmatic Media LLC</p>
+                      <img id="logoImg" src="images/logo.jpg" alt="..." style="width:95%;">
+                    </div>
+                    <div ng-controller="EmailCtrl" class="caption col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h2>Don't Miss A Thing</h2>
+                      <p>Subscribe to your email list to get the lastest content, special annoucements and exclusive material directly to your inbox!</p>
+        `             <br>
+                      <div id="formContainer">
+                        <form ng-submit="submitEmail()" class="form-inline">
+                          <div class="form-group">
+                            <input ng-model="email" name="email" placeholder=" Email" type="email" class="form-control">
+                          </div>
+                          <button id="emailButton" type="submit" class="btn btn-default">Sign Up</button>
+                        </form>
+                      </div>
+                      <br>
+                    </div>
+                    <br>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="media-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <a href="media_library.html" class="header_btn" role="button">See More Content</a>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row team_content">
+          <h1>Meet The Team</h1>
+          <br>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature">
+                <img class="img-circle img-responsive img-center" src="images/tyler.jpg" alt="">
+                <h3>Tyler</h3>
+                <p>Tyler is a successful radio broadcaster in East Texas. He received his B.A. in Radio/TV and M.A. in Communication Studies at Stephen F. Austin State University. His hobbies include cooking good food, outdoors, drinking beer, philosophy, wrestling grizzly bears, fake hobbies, watching sports, and a dedication to media content.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 feature feature2">
+                <img class="img-circle img-responsive img-center" src="images/slob.jpg" alt="">
+                <h3>Rob</h3>
+                <p>As President and co-founder of Pragmatic Media LLC, Rob "The Slob" Vernon is an iconoclast, self-described internet troll, cultural nihilist, and all-around terrible person. Best known for using his cursory knowledge of a multitude of subjects to bamboozle unsuspecting bystanders into thinking he's smarter than he actually is.</p>
+            </div>
+            <br>
+        </div>
+      </div>
+        <br>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <hr>
+          <footer>
+              <div class="row">
+                  <div>
+                      <p>Copyright &copy; <a href="http://pieropretto.com">Piero Pretto 2017</a></p>
+                  </div>
+              </div>
+              <!-- /.row -->
+          </footer>
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

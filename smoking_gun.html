@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Pragmatic Media">
+    <meta name="keywords" content="Pragmatic Media, Ty and Slob, Piero Pretto">
+    <meta property="og:description" content="We finally found the dirt on Trump that will take him down once and for all!" />
+    <meta property="og:image" content="http://tyandslob.com/images/smoking_gun.jpg"/>
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="714">
+    <meta property="og:image:height" content="400">
+    <meta property="og:title" content="Ty and Slob: SMOKING GUN!!! FBI/CIA Joint Surveillance of Trump"/>
+    <meta property="og:url" content="http://tyandslob.com/youtube_channel_smoking_gun.html"/>
+    <meta property="og:site_name" content="http://tyandslob.com/youtube_channel_smoking_gun.html"/>
+    <meta property="og:type" content="website"/>
+
+    <title class="ng-cloak">Ty and Slob: SMOKING GUN!!! FBI/CIA Joint Surveillance of Trump</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="business-media-library.css" rel="stylesheet">
+    <link href="media_library.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet" type='text/css'>
+
+</head>
+
+<body ng-controller="MediaCtrl">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top custom-nav" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse float-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-1x"></i></a></li>
+                  <li><a href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-1x"></i></a></li>
+                  <li><a href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-1x"></i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube"></i></a></li>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://teechip.com/fan-tool">Shop</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header"id="mediaContainer">
+        <div class="container">
+            <div class="row banner_content col-lg-12">
+                  <br>
+                  <br>
+                  <br>
+                  <div class="ng-cloak" id="mediaPlayer" data-video-id="58c1adfa6706fa040048091c">
+                    <div id="playerHeading">
+                      <span>Ty And Slob |</span><span>{{banner.title}}</span>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9" ng-bind-html="banner.iframe">
+                    </div>
+                    <div id="playerDescription">
+                      <span>
+                       {{banner.description}}
+                      </span>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <br>
+        <br>
+
+        <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12" id="main">
+              <div>
+                <h2>Media Library</h2>
+                <hr>
+              </div>
+              <div class="ng-cloak" ng-repeat="media in library" class="media_item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div id={{media.id}} class="col-lg-2 col-md-2 col-sm-2 col-xs-4" style="padding-top:10px;">
+                  <a href="#"><img style="width:95%" src="images/play_button.png" class="img-fluid mediaButton" alt="Responsive image" ng-click="displayMedia(media._id)"></a>
+                </div>
+                <div style="min-height:210px" class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
+                  <h2>{{media.title}}</h2>
+                  <p>{{media.description}}</p>
+                  <br>
+                </div>
+              </div>
+            <br>
+            </div>
+              <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 marketing-container">
+                <h2>Connect With Us</h2>
+                <hr>
+                <div class="thumbnail">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:80px;">
+                      <div class="col-md-12 .col-md-offset-6">
+                        <ul class="social">
+                          <li class="facebook"><a href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                          <li class="twitter"><a href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-3x"></i></a></li>
+                          <li class="pinterest"><a href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube fa-3x"></i></a></li>
+                          <li class="behance"><a href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                        </ul>
+
+                      </div>
+                  </div>
+                  </div>
+                  <div style="text-align:center;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                      <p class="tagline">Pragmatic Media LLC</p>
+                      <img id="logoImg" src="images/logo.jpg" alt="..." style="width:95%;">
+                    </div>
+                    <div ng-controller="EmailCtrl" class="caption col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h2>Don't Miss A Thing</h2>
+                      <p>Subscribe to your email list to get the lastest content, special annoucements and exclusive material directly to your inbox!</p>
+        `             <br>
+                      <div id="formContainer">
+                        <form ng-submit="submitEmail()" class="form-inline">
+                          <div class="form-group">
+                            <input placeholder=" Email" type="email" class="form-control">
+                          </div>
+                          <button ng-model="email" name="email" id="emailButton" type="submit" class="btn btn-default">Sign Up</button>
+                        </form>
+                      </div>
+                      <br>
+                    </div>
+                    <br>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <hr>
+          <footer>
+              <div class="row">
+                  <div>
+                      <p>Copyright &copy; <a href="http://pieropretto.com">Piero Pretto 2017</a></p>
+                  </div>
+              </div>
+          </footer>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
