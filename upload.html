@@ -1,25 +1,72 @@
+<!DOCTYPE html>
 <html lang="en" ng-app="post_app">
-<head>
-  <title>Pragmatic Media - Upload Content</title>
-  <!-- Bootstrap Core CSS -->
-  <link href="vendor/css/bootstrap.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-</head>
-  <body>
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" class="form-control" id="title" aria-describedby="title input" placeholder=" Christmas Extravaganza">
-      <label for="description">Description</label>
-      <textarea class="form-control" id="description" rows="2"></textarea>
-      <label for="embed_video">Content Url</label>
-      <input type=url class="form-control" id="exampleInputEmail1" aria-describedby="url input" placeholder="">
-      <small class="form-text text-muted">Please sumbit content url in embed form</small>
-  </div>
+  <head>
+    <title>Pragmatic Media - Upload Content</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Pragmatic Media">
+    <meta name="keywords" content="Pragmatic Media, Ty and Slob, Piero Pretto">
+    <meta property="og:type" content="website"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-controller="UploadCtrl">
+    <style>
+    #formContainer {vertical-align: center;}
+    #status {color: green; padding-left: 10px;}
+    .nav > li > a:hover, .nav > li > a:focus, .nav > li > a {
+        text-decoration: none;
+        float: right;
+        font-size: 18px;
+        color: #000;
+    }
+    .custom-nav {
+      background: #222 !important;
+      opacity: .4;
+      border: none;
+      color: #000 !important;
+    }
+    ul { padding-left: 10px; padding-right: 10px;}
+    </style>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top custom-nav">
+      <div class-"container-fluid">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+            <!-- /.navbar-collapse -->
+    </nav>
+    <div class="container" id="formContainer">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <br>
+        <br>
+        <br>
+        <h2>Upload Media</h2>
+        <br>
+        <form id="form" ng-submit="submitMedia()" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="title">Title</label>
+              <input ng-model="title" type="text" class="form-control" id="title" aria-describedby="title input" placeholder=" SMOKING GUN!" pattern=".{3,}" required>
+            <br>
+            <label for="description">Description</label>
+              <textarea ng-model="description" class="form-control" id="description" rows="4" placeholder=" We finally found the dirt on Trump.." pattern=".{5,}" required></textarea>
+            <br>
+            <label for="embed_video">iFrame Url</label>
+              <input ng-model="iframe" type="text" class="form-control" id="iframe" aria-describedby="url input" pattern=".{65,}" placeholder="<iframe src='https://www.youtube.com/embed/d0OtoqsEjt0'></iframe>" required>
+          </div>
+          <br>
+          <button id="emailButton" type="submit" class="btn btn-default">Add to site</button><span id="status"></span>
+        </form>
+      </div>
+    </div>
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
+    <script src="upload.js"></script>
   </body>
-  <script src="vendor/js/jquery.min.js"></script>
-  <script src="vendor/js/angular.min.js"></script>
-  <script src="app.js"></script>
-</body>
-
 </html>
