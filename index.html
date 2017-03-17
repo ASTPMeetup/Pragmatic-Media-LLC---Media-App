@@ -45,21 +45,21 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse float-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-1x"></i></a></li>
-                  <li><a href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-1x"></i></a></li>
-                  <li><a href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-1x"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube"></i></a></li>
-                    <li>
-                        <a href="media_library.html">Media</a>
-                    </li>
-                    <li>
-                        <a href="http://teechip.com/FanTool">Shop</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
+              <ul role="list" class="nav navbar-nav">
+                <li role="listitem"><a alt="facebook link" role="link" href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-1x"></i></a></li>
+                <li role="listitem"><a alt="twitter link" role="link" href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-1x"></i></a></li>
+                <li role="listitem"><a alt="instagram link" role="link" href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-1x"></i></a></li>
+                <li role="listitem"><a alt="youtube link" role="link" href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube"></i></a></li>
+                <li role="listitem">
+                    <a alt="link to media page" role="link" href="media_library.html">Media</a>
+                </li>
+                <li role="listitem">
+                    <a alt="link to shop page" role="link" href="http://teechip.com/fan-tool">Shop</a>
+                </li>
+                <li role="listitem">
+                    <a alt="link to contact page" role="link" href="contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
             <!-- /.navbar-collapse -->
     </nav>
@@ -109,43 +109,45 @@
                 <br>
                 <h2>Popular Content</h2>
                 <hr>
-                <li ng-repeat="item in library | limitTo:5">
-                    <p><strong><a href="media_library.html?video_id={{item._id}}">{{item.title}}</a></strong><span><i>{{item.date}}</i></span></p>
-                </li>
+                <div role="list">
+                  <li role="listitem" ng-repeat="item in library | limitTo:5">
+                      <p><strong><a href="media_library.html?video_id={{item._id}}">{{item.title}}</a></strong><span><i>{{item.date}}</i></span></p>
+                  </li>
+                </div>
                 <br>
             </div>
-              <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 marketing-container">
+            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 marketing-container">
                 <h2>Connect With Us</h2>
                 <hr>
                 <div class="thumbnail">
                   <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:80px;">
                       <div class="col-md-12 .col-md-offset-6">
-                        <ul class="social">
-                          <li class="facebook"><a href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-3x"></i></a></li>
-                          <li class="twitter"><a href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-3x"></i></a></li>
-                          <li class="pinterest"><a href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube fa-3x"></i></a></li>
-                          <li class="behance"><a href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                        <ul role="list" class="social">
+                          <li role="listitem" class="facebook"><a alt="facebook link" role="link" href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                          <li role="listitem"class="twitter"><a alt="twitter link" role="link" href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-3x"></i></a></li>
+                          <li role="listitem" class="pinterest"><a alt="youtube link" role="link" href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube fa-3x"></i></a></li>
+                          <li role="listitem" class="behance"><a alt="instagram link" role="link" href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-3x"></i></a></li>
                         </ul>
 
                       </div>
-                  </div>
+                    </div>
                   </div>
                   <div style="text-align:center;">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
                       <p class="tagline">Pragmatic Media LLC</p>
-                      <img id="logoImg" src="images/logo.jpg" alt="..." style="width:95%;">
+                      <img id="logoImg" alt="logo" src="images/logo.jpg" style="width:95%;">
                     </div>
                     <div ng-controller="EmailCtrl" class="caption col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <h2>Don't Miss A Thing</h2>
                       <p>Subscribe to your email list to get the lastest content, special annoucements and exclusive material directly to your inbox!</p>
         `             <br>
-                      <div id="formContainer">
+                      <div role="form" title="email submission form" id="formContainer">
                         <form ng-submit="submitEmail()" class="form-inline">
                           <div class="form-group">
-                            <input ng-model="email" name="email" placeholder=" Email" type="email" class="form-control">
+                            <input aria-label="email subscribe" placeholder=" Email" type="email" class="form-control">
                           </div>
-                          <button id="emailButton" type="submit" class="btn btn-default">Sign Up</button>
+                          <button role="button" ng-model="email" name="email" id="emailButton" type="submit" class="btn btn-default">Sign Up</button>
                         </form>
                       </div>
                       <br>
