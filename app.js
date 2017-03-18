@@ -80,7 +80,7 @@ app.controller('EmailCtrl', function($scope, $http){
   $scope.email = "";
   $scope.submitEmail = function() {
     var emailObj = {"email_address": $scope.email};
-    $http.post("https://openws.herokuapp.com/emails?apiKey=8fa0e46f0361117d65d91d6032391324", emailObj)
+    $http.post("https://openws.herokuapp.com/iframes?apiKey=8fa0e46f0361117d65d91d6032391324", emailObj)
       .then(function success(response){
         console.log(response);
       },function error(response){
