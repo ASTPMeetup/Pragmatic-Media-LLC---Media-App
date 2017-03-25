@@ -1,4 +1,4 @@
-var app = angular.module('app', []);
+'use strict'
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -10,7 +10,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-//for page-scroll links
+//make page-scroll links pull down page slowly
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -20,6 +20,8 @@ $(function() {
         event.preventDefault();
     });
 });
+
+var app = angular.module('app', []);
 
 var dynamicUrlTitle = getParameterByName('video_id');
 

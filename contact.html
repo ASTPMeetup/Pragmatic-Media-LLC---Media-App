@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="contact_app">
 
 <head>
 
@@ -87,51 +87,37 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+    <div ng-controller="ContactFormCtrl" class="container">
 
         <br>
         <br>
 
         <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h2>Connect With Us</h2>
+            <h2>Contact Us</h2>
             <hr>
             <div class="thumbnail">
               <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:80px;">
-                  <div class="col-md-12 .col-md-offset-6">
-                    <ul role="list" class="social">
-                      <li role="listitem" class="facebook"><a alt="facebook link" role="link" href="https://www.facebook.com/tyandslob/"><i class="fa fa-facebook fa-3x"></i></a></li>
-                      <li role="listitem"class="twitter"><a alt="twitter link" role="link" href="https://www.twitter.com/tyandslob"><i class="fa fa-twitter fa-3x"></i></a></li>
-                      <li role="listitem" class="pinterest"><a alt="youtube link" role="link" href="https://www.youtube.com/channel/UClRdQ4lYE76r1BKYbZRvH0A"><i class="fa fa-youtube fa-3x"></i></a></li>
-                      <li role="listitem" class="behance"><a alt="instagram link" role="link" href="https://www.instagram.com/tyandslob/"><i class="fa fa-instagram fa-3x"></i></a></li>
-                    </ul>
-                  </div>
+                <div role="form" title="contact submission form" id="formContainer">
+                  <form id="form" ng-submit="messageSubmit()" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div role="list" class="form-group">
+                      <label for="name">Name</label>
+                        <input role="listitem" ng-model="name" type="text" class="form-control" id="title" aria-describedby="name input" placeholder=" John Doe" pattern=".{3,}" required>
+                      <br>
+                      <label for="email">Email</label>
+                        <input role="listitem" ng-model="email" type="email" class="form-control" id="title" aria-describedby="email input" placeholder=" person@person.com" pattern=".{3,}" required>
+                      <br>
+                      <label for="message">Message</label>
+                        <textarea role="listitem" ng-model="message" type="text" class="form-control" id="description" rows="4" aria-describedby="message input" placeholder=" You guys rock.." pattern=".{5,}" required></textarea>
+                    </div>
+                    <br>
+                    <button id="emailButton" type="submit" class="btn btn-default">Submit</button><span id="status"></span>
+                  </form>
                 </div>
-              </div>
-              <div style="text-align:center;">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
-                  <p class="tagline">Pragmatic Media LLC</p>
-                  <img id="logoImg" alt="logo" src="images/logo.jpg" style="width:35%;">
-                </div>
-                <div ng-controller="EmailCtrl" class="caption col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <h2>Don't Miss A Thing</h2>
-                  <p>Subscribe to your email list to get the lastest content, special annoucements and exclusive material directly to your inbox!</p>
-    `             <br>
-                  <div role="form" title="email submission form" id="formContainer">
-                    <form ng-submit="submitEmail()" class="form-inline">
-                      <div class="form-group">
-                        <input name="email" ng-model="email" placeholder=" Email" type="email" class="form-control" aria-label="subscribe">
-                      </div>
-                      <button role="button" id="emailButton" type="submit" class="btn btn-default">Sign Up</button>
-                    </form>
-                  </div>
                 <br>
               </div>
-              <br>
             </div>
           </div>
-        </div>
         </div>
         <br>
 
@@ -155,7 +141,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/js/bootstrap.min.js"></script>
     <script src="vendor/js/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="contact-app.js"></script>
 </body>
 
 </html>

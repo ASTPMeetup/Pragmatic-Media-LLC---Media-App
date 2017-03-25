@@ -59,18 +59,17 @@ span {
   text-align: center;
   background-color: #f5f5f5 !important;
   border-radius: 4px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e7e7e7;
+  outline: 2px solid #e7e7e7;
+  outline-offset: -5px;
 }
 .info-banner {
   color:#fff;
-  background-color:#000;
+  background-color: #333;
   text-align: center;
   padding: 20px 20px 5px 20px;
 }
-#down-arrow {
-  width: 40px;
-  margin-top: -10px;
-}
+
 .thumbnail {
   background-color: inherit !important;
   border: none !important;

@@ -1,4 +1,4 @@
-var app = angular.module('post_app',[]);
+var app = angular.module('upload_app',[]);
 var date = new Date();
 var mainUrl = "https://openws.herokuapp.com/soundcloud?apiKey=8fa0e46f0361117d65d91d6032391324";
 
@@ -38,7 +38,7 @@ app.controller('UploadCtrl', function($scope, $http){
 		    console.log(response);
 				$('#form')[0].reset();
 				$('#status').html(" Success!");
-				
+
 		  }, function error(response){
 		    console.log(response);
 				$('#status').text(" Something went wrong..");

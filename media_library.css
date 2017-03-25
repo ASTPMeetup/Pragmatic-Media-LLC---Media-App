@@ -50,6 +50,7 @@ body {
   min-height: 240px;
   padding-top: 50px;
   margin-top: 30px;
+  border-bottom: 3px solid #eee;
 }
 .mediaButton:hover {
   -webkit-transform: scale(1.1);
@@ -85,9 +86,10 @@ span {
   text-align: center;
   background-color: #f5f5f5 !important;
   border-radius: 4px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #e7e7e7;
+  outline: 2px solid #e7e7e7;
+  outline-offset: -5px;
 }
-
 .thumbnail {
   background-color: inherit !important;
   border: none !important;
@@ -303,6 +305,9 @@ span {
   }
   .nav > li > a:hover, .nav > li > a:focus, .nav > li > a {
     font-size: 18px;
+  }
+  .description {
+    min-height: 450px;
   }
 }
 
