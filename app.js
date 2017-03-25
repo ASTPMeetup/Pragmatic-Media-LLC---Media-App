@@ -9,6 +9,18 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+//for page-scroll links
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutQuad');
+        event.preventDefault();
+    });
+});
+
 var dynamicUrlTitle = getParameterByName('video_id');
 
 app.controller('MediaCtrl', function($scope, $http, $sce) {

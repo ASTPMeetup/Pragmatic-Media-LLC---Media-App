@@ -61,7 +61,16 @@ span {
   border-radius: 4px;
   border: 1px solid #e5e5e5;
 }
-
+.info-banner {
+  color:#fff;
+  background-color:#000;
+  text-align: center;
+  padding: 20px 20px 5px 20px;
+}
+#down-arrow {
+  width: 40px;
+  margin-top: -10px;
+}
 .thumbnail {
   background-color: inherit !important;
   border: none !important;

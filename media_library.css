@@ -37,9 +37,20 @@ body {
   padding-top: 0 !important;
   font-family: 'Khula', sans-serif !important;
 }
-/*.mediaButton {
-  padding: 10px;
-}*/
+.scroll-banner {
+  text-align: center;
+}
+.scroll-img {
+  z-index: 99;
+  width: 114px;
+  height: 114px;
+}
+.description {
+  background-image: url(images/audio3.png);
+  min-height: 240px;
+  padding-top: 50px;
+  margin-top: 30px;
+}
 .mediaButton:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
