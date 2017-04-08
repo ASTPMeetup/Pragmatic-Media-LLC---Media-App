@@ -110,7 +110,7 @@
                   <a role="button" href="#" alt="Play button link"><img data-aos="fade" style="max-width:95%;" src="images/play_button-min.png" class="img-fluid mediaButton" alt="Play button image" ng-click="displayMedia(media._id)"></a>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                  <h2 data-aos="fade" role="listitem"><a href="#" alt="Play link" ng-click="displayMedia(media._id)">{{media.title}}</a></h2>
+                  <h2 data-aos="fade" role="listitem"><a href="#" alt="Play link" ng-click="displayMedia(media._id)"><strong>{{media.title}}</strong></a></h2>
                   <p data-aos="fade" role="listitem"><strong>{{media.date}}</strong></p>
                   <p data-aos="fade" role="listitem"><strong>{{media.description}}</strong></p>
                 </div>
@@ -187,7 +187,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
     <script>
       //scroll animation library
-      AOS.init();
+      AOS.init({disable: 'mobile'});
 
       //google-analytics
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

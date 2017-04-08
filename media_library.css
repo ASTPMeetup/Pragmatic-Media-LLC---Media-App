@@ -46,9 +46,6 @@ body {
   height: 114px;
 }
 .description {
-  background-image: url(images/audio3.png);
-  min-height: 240px;
-  padding-top: 50px;
   margin-top: 30px;
   border-bottom: 3px solid #eee;
 }
@@ -285,6 +282,14 @@ span {
 #main {
   padding-right:50px;
 }
+
+@media (min-width: 768px) {
+  .description {
+    background-image: url(images/audio3.png);
+    padding-top: 50px;
+    min-height: 240px;
+  }
+}
 @media (max-width: 768px) {
   header {
       min-height: 100%;
@@ -307,7 +312,7 @@ span {
     font-size: 18px;
   }
   .description {
-    min-height: 450px;
+    min-height: 375px;
   }
 }
 
@@ -328,9 +333,4 @@ span {
   #media_item {
     min-height: 500px;
   }
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
