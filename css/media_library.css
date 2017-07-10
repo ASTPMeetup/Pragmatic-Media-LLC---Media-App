@@ -48,6 +48,8 @@ body {
 .description {
   margin-top: 30px;
   border-bottom: 3px solid #eee;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .mediaButton:hover {
   -webkit-transform: scale(1.1);
@@ -125,10 +127,6 @@ span {
 .media_item {
   border-bottom: 2px solid #efefef;
   zoom: 100%;
-}
-.media_item:hover {
-  background: #efefef;
-  zoom: 105%;
 }
 .banner_header {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -286,7 +284,6 @@ span {
 @media (min-width: 768px) {
   .description {
     background-image: url(images/audio3.png);
-    padding-top: 50px;
     min-height: 240px;
   }
 }
@@ -323,6 +320,9 @@ span {
   .feature2 {
     border-left: none;
     border-top:#ccc solid 1px;
+  }
+  .marketing-container {
+    margin-top: 50px;
   }
   #logoImg {
     display: none;

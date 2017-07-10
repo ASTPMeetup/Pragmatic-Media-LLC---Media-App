@@ -22,12 +22,12 @@
     <link href="vendor/css/bootstrap_mini.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="business-media-library_mini.css" rel="stylesheet">
-    <link href="media_library_mini.css" rel="stylesheet">
+    <link href="css/business-media-library_mini.css" rel="stylesheet">
+    <link href="css/media_library_mini.css" rel="stylesheet">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet" type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css" rel="stylesheet">
 
 </head>
 
@@ -105,14 +105,22 @@
                 <h2>Media Library</h2>
                 <hr>
               </div>
-              <div role="list" class="ng-cloak description" ng-repeat="media in library" class="media_item col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div id={{media.id}} class="col-lg-2 col-md-2 col-sm-2 col-xs-4" style="padding-top:10px;">
-                  <a role="button" href="#" alt="Play button link"><img data-aos="fade" style="max-width:95%;" src="images/play_button-min.png" class="img-fluid mediaButton" alt="Play button image" ng-click="displayMedia(media._id)"></a>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-                  <h2 data-aos="fade" role="listitem"><a href="#" alt="Play link" ng-click="displayMedia(media._id)"><strong>{{media.title}}</strong></a></h2>
-                  <p data-aos="fade" role="listitem"><strong>{{media.date}}</strong></p>
-                  <p data-aos="fade" role="listitem"><strong>{{media.description}}</strong></p>
+              <div role="list" ng-repeat="media in library">
+                <div class="ng-cloak description media_item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div id={{media.id}} class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <a role="button" href="#" alt="thumbnail">
+                      <img class="img-thumbnail" ng-click="displayMedia(media._id)" data-aos="fade" src="{{media.thumbnail}}">
+                    </a>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h3 data-aos="fade" role="listitem">
+                      <a href="#" alt="Play link" ng-click="displayMedia(media._id)">
+                        <strong>{{media.title}}</strong>
+                      </a>
+                    </h3>
+                    <p data-aos="fade" role="listitem"><strong>{{media.date}}</strong></p>
+                    <p data-aos="fade" role="listitem"><strong>{{media.description}}</strong></p>
+                  </div>
                 </div>
                 <br>
               </div>
@@ -183,7 +191,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/js/bootstrap.min.js"></script>
     <script src="vendor/js/angular.min.js"></script>
-    <script src="app_mini.js"></script>
+    <script src="js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
     <script>
       //scroll animation library
