@@ -3,9 +3,3 @@ Ty and Slob produces humorous yet serious content on pop culture, trending topic
 
 
 ![responsive-web-template](images/screenshot.jpg)
-
-
-## Instructions
-
-
-View the live site at [TyandSlob.com](http://tyandslob.com).
